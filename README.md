@@ -6,7 +6,7 @@ Each TCR belongs to one of four source categories based on what its cognate anti
 
 ## Data
 
-The training data is provided as a single CSV file. It is mostly raw and uncleaned. It contains inconsistent formatting, a long-tail distribution of source pathologies, and many labels that may or may not map to one of the four target classes. Cleaning the data, deciding which pathologies belong to which class, handling ambiguous or duplicate labels, and choosing what to drop are part of the task.
+The training data is provided as a single CSV file at `data/McPAS-TCR-Raw.csv`. The file is mostly raw and uncleaned. It contains inconsistent formatting, a long-tail distribution of source pathologies, and many labels that may or may not map to one of the four target classes. Cleaning the data, deciding which pathologies belong to which class, handling ambiguous or duplicate labels, and choosing what to drop are part of the task.
 
 The relevant columns are:
 
