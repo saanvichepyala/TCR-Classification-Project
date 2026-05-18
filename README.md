@@ -4,12 +4,6 @@ Build a multi-class TCR source classifier.
 
 Each TCR belongs to one of four source categories based on what its cognate antigen is associated with. The data in this repository is the public training set only; final evaluation uses a held-out TCR set that is not included here.
 
-## Background
-
-T cells are a type of white blood cell that recognize and respond to threats inside the body such as infected cells, cancerous cells, and in some cases, the body's own healthy cells (autoimmunity). Each T cell carries a unique surface protein called a **T cell receptor (TCR)** that determines what it can recognize. The TCR binds to short protein fragments called peptides (or antigens in the immunology context). If a TCR matches a peptide, the T cell activates and mounts a response, which usually means killing the cell presenting that antigen.
-
-The most variable and antigen-specific part of the TCR is a short region called **CDR3β**, which makes the most direct contact with the peptide. Two other features are often reported alongside the CDR3β sequence: the **Vβ** and **Jβ** genes, which are gene segments that influence the rest of the TCR and shape which peptides it can bind. In real-world datasets, V and J annotations are often missing because some sequencing methods don't report them.
-
 ## Data
 
 The training data is provided as a single CSV file. It is mostly raw and uncleaned. It contains inconsistent formatting, a long-tail distribution of source pathologies, and many labels that may or may not map to one of the four target classes. Cleaning the data, deciding which pathologies belong to which class, handling ambiguous or duplicate labels, and choosing what to drop are part of the task.
