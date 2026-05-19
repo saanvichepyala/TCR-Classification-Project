@@ -2,11 +2,11 @@
 
 Build a multi-class TCR source classifier.
 
-Each TCR belongs to one of four source categories based on what its cognate antigen is associated with. The data in this repository is the public training set and evaluation sets. 
+Each TCR belongs to one of three source categories based on what its cognate antigen is associated with. The data in this repository is the public training set and evaluation sets. 
 
 ## Data
 
-The training data is provided as a single CSV file at `data/TCR-Processed-Raw.csv`. The file is mostly raw and uncleaned. It contains inconsistent formatting, a long-tail distribution of source pathologies, and many labels that may or may not map to one of the four target classes. Cleaning the data, deciding which pathologies belong to which class, handling ambiguous or duplicate labels, and choosing what to drop are part of the task.
+The training data is provided as a single CSV file at `data/TCR-Processed-Raw.csv`. The file is mostly raw and uncleaned. It contains inconsistent formatting, a long-tail distribution of source pathologies, and many labels that may or may not map to one of the three target classes. Cleaning the data, deciding which pathologies belong to which class, handling ambiguous or duplicate labels, and choosing what to drop are part of the task.
 
 The relevant columns are:
 
@@ -22,7 +22,6 @@ Target classes:
 - `viral`
 - `bacterial`
 - `cancer`
-- `autoimmune`
 
 ## Challenge
 
@@ -41,7 +40,7 @@ You may not use any model or dataset that was trained directly on labels overlap
 
 ## Evaluation
 
-Evaluation is four-class classification on a held-out test set. The held-out set is restricted to TCRs whose source pathology clearly maps to one of the four target classes, so you do not need to handle an "other" category at inference time. Each submission will be evaluated separately in both input modes: sequence only and sequence plus genes.
+Evaluation is three-class classification on a held-out test set. The held-out set is restricted to TCRs whose source pathology clearly maps to one of the three target classes, so you do not need to handle an "other" category at inference time. Each submission will be evaluated separately in both input modes: sequence only and sequence plus genes.
 
 Submissions should produce one score or probability per class for each TCR in either mode.
 
