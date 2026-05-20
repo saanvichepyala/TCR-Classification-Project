@@ -2,7 +2,7 @@
 
 Build a multi-class TCR source classifier.
 
-Each TCR belongs to one of three source categories based on what its cognate antigen is associated with. The data in this repository is the public training set and evaluation sets. 
+Each TCR belongs to one of four source categories based on what its cognate antigen is associated with. The data in this repository is the public training set only; final evaluation uses a held-out TCR set that is not included here.
 
 ## Data
 
